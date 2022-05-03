@@ -12,4 +12,45 @@ const reverseString= (stringarg) => {
     return reversed;
 }
 
-module.exports = { stringLength, reverseString};
+class Calculator {
+    addition = (x, y) => {
+         if (Number.isInteger(x) === false || Number.isInteger(y) === false) {
+            throw new Error('values are not integers');
+        }
+        if (x > 100 || y > 100) {
+            throw new Error('Values must be less than 101');
+        }
+        return x + y;
+    }
+    subtraction = (x, y) => {
+        if (Number.isInteger(x) === false || Number.isInteger(y) === false) {
+            throw new Error('values are not integers');
+        }
+        if (x > 100 || y > 100) {
+            throw new Error('Values must be less than 101');
+        }
+        return x - y;
+    }
+    division = (x, y) => {
+        
+        if (Number.isInteger(x) === false || Number.isInteger(y) === false) {
+            throw new Error('values are not integers');
+        }
+        if (y === 0) {
+            throw new Error('calculation not allowed');
+        }
+        return x / y;
+    }
+    multiplication = (x, y) => {
+        
+        if (Number.isInteger(x) === false || Number.isInteger(y) === false) {
+            throw new Error('values are not integers');
+        }
+        if (x > 100 || y > 100) {
+            throw new Error('Values must be less than 101');
+        }
+        return x * y;
+    }
+}
+
+module.exports = { stringLength, reverseString, Calculator};
