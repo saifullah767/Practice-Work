@@ -53,4 +53,11 @@ class Calculator {
     }
 }
 
-module.exports = { stringLength, reverseString, Calculator};
+const capitalize= (String) =>{
+    let getvalue=String.split('');
+    getvalue[0]=getvalue[0].toUpperCase();
+    let strN=getvalue.join('');
+    return strN;
+}
+
+module.exports = { stringLength, reverseString, Calculator, capitalize};

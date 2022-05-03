@@ -1,4 +1,4 @@
-const {stringLength, reverseString, Calculator} = require ("./index.js");
+const {stringLength, reverseString, Calculator, capitalize} = require ("./index.js");
 
 test('String with valid length', () => {
     expect(stringLength('One string')).toBe(10);
@@ -69,4 +69,16 @@ describe('Calculator', () => {
             expect(() => calculator.multiplication(102, 7)).toThrowError(Error);
         });
     });
+});
+
+test('Capitalize string', () => {
+    let String='my string';
+    expect(String).toMatch(/\w+/g);
+    expect(capitalize(String)).toBe('My string');
+});
+
+test('Capitalize Error ', () => {
+    let String='123';
+    expect(String).toMatch(/\w+/g);
+    expect(capitalize(String)).not.toBe('My string');
 });
